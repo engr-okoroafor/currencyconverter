@@ -84,13 +84,13 @@ body {
     cursor: pointer;
     color: #ffffff;
     font-size: 24px;
-    margin: 10px;
+    margin: 8px;
 }
 
 /* Currency Options */
 .options select {
     padding: 5px;
-    width: 120px;
+    width: 95px;
     margin-bottom: 10px;
     border: 1px solid #f5caca;
     border-radius: 5px;
@@ -107,7 +107,7 @@ body {
     font-size: 1rem;
     color: #ffffff;
     background-color: #1d1d1d;
-    width: 95%; /* Reduce width to 70% */
+    width: 90%; /* Reduce width to 70% */
 }
 
 /* Target Currency */
