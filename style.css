@@ -52,7 +52,7 @@ body {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
 }
 
@@ -107,7 +107,7 @@ body {
     font-size: 1rem;
     color: #ffffff;
     background-color: #1d1d1d;
-    width: 90%; /* Reduce width to 70% */
+    width: 93%; /* Reduce width to 93% */
 }
 
 /* Target Currency */
