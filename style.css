@@ -52,7 +52,7 @@ body {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
@@ -137,7 +137,20 @@ body {
     animation: glow 1s infinite;
 }
 
-
+/* Additional Styles for Side Container */
+.side-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 1/3;
+    background-color: rgba(29, 29, 29, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 .rate-card {
     background-color: rgba(0, 0, 0, 0.5);
