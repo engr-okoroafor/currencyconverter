@@ -11,26 +11,52 @@
     <script data-ad-client="YOUR_ADSENSE_CLIENT_ID" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2 class="heading">Currency Converter</h2>
-        <div class="rate">
-            <div class="rate1"></div>
-            <div class="rate2"></div>
-        </div>
-        <div class="main">
-            <div class="initial">
-                <div class="options"><select></select></div>
-                <div class="input"><input type="number"></div>
+    <div class="flex-container">
+        <div class="main-container">
+            <div class="clock" align="center" style="color: white; text-shadow: 0 0 10px pink;">
+                <span class="clock-content">Clock Content</span>
             </div>
-            <span class="material-icons swap" style="font-size: 36px;">
-            swap_horiz
-            </span>
-            <div class="target">
-                <div class="options"><select></select></div>
-                <div class="input"><input disabled type="number"></div>
+            <p></p>
+            <div class="container">
+                <h2 class="heading">Currency Converter</h2>
+                <div class="rate">
+                    <div class="rate1"></div>
+                    <div class="rate2"></div>
+                </div>
+                <div class="main">
+                    <div class="initial">
+                        <div class="options"><select></select></div>
+                        <div class="input"><input type="number"></div>
+                    </div>
+                    <span class="material-icons swap" style="font-size: 36px;">
+                        swap_horiz
+                    </span>
+                    <div class="target">
+                        <div class="options"><select></select></div>
+                        <div class="input"><input disabled type="number"></div>
+                    </div>
+                </div>
+                <button class="result">Result</button>
             </div>
         </div>
-        <button class="result">Result</button>
+        
+        <div class="rate-card" align="center" style="margin-top: 20px; border: 2px solid pink;">
+            <div class="currentrate-row" style="color: white; text-shadow: 0 0 15px blue;">
+                CURRENT RATES <span class="flag-emoji">🇳🇬</span>
+            </div>
+            <div class="rate-row">
+                <span class="flag-emoji">🇺🇸</span> 1 USD = <span data-currency-code="USD">₦ XX.XX</span> <span class="flag-emoji">🇳🇬</span>
+            </div>
+            <div class="rate-row">
+                <span class="flag-emoji">🇬🇧</span> 1 GBP = <span data-currency-code="GBP">₦ XX.XX</span> <span class="flag-emoji">🇳🇬</span>
+            </div>
+            <div class="rate-row">
+                <span class="flag-emoji">🇪🇺</span> 1 EUR = <span data-currency-code="EUR">₦ XX.XX</span> <span class="flag-emoji">🇳🇬</span>
+            </div>
+            <div class="rate-row">
+                <span class="flag-emoji">🇨🇦</span> 1 CAD = <span data-currency-code="CAD">₦ XX.XX</span> <span class="flag-emoji">🇳🇬</span>
+            </div>
+        </div>
     </div>
     
     <!-- Google AdSense Code for Footer -->
