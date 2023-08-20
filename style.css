@@ -21,7 +21,7 @@ body {
 .container {
     background-color: rgba(29, 29, 29, 0.8);
     width: 470px;
-    max-width: 100%; /* Adjust max-width as needed */
+    max-width: 75%; /* Adjust max-width as needed */
     height: auto;
     padding: 30px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8), 0px 0px 20px #03a9f4;
@@ -52,7 +52,7 @@ body {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     margin-bottom: 20px;
 }
 
@@ -65,8 +65,8 @@ body {
 
 .rate1,
 .rate2 {
-    color: #ccc;
-    font-size: 1.2rem;
+    color: #ffffff;
+    font-size: 1rem;
 }
 
 /* Conversion Section */
@@ -82,7 +82,7 @@ body {
     align-self: flex-end;
     padding: 5px;
     cursor: pointer;
-    color: #ccc;
+    color: #ffffff;
     font-size: 24px;
     margin: 10px;
 }
@@ -92,21 +92,22 @@ body {
     padding: 5px;
     width: 120px;
     margin-bottom: 10px;
-    border: 1px solid #444;
+    border: 1px solid #f5caca;
     border-radius: 5px;
     font-size: 1rem;
-    color: #ccc;
+    color: #ffffff;
     background-color: #1d1d1d;
 }
 
 /* Input Fields */
 .input input {
     padding: 10px;
-    border: 1px solid #444;
+    border: 1px solid #f5caca;
     border-radius: 5px;
     font-size: 1rem;
-    color: #ccc;
+    color: #ffffff;
     background-color: #1d1d1d;
+    width: 95%; /* Reduce width to 70% */
 }
 
 /* Target Currency */
@@ -117,8 +118,8 @@ body {
 /* Result Button */
 .result {
     margin-top: 1.5rem;
-    width: 100%;
-    height: 50px;
+    width: 50%; /* Reduce width to 50% */
+    height: 45px;
     text-align: center;
     color: #ffffff;
     background-color: #03a9f4;
@@ -126,8 +127,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: 25%; /* Center the button */
 }
 
 .result:hover {
@@ -155,10 +157,12 @@ body {
     padding: 10px;
     border-radius: 10px;
     color: white;
+    width: 80%; /* Reduce width to 80% */
+    margin: 0 auto; /* Center the rate card horizontally */
 }
 
 .rate-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
@@ -170,6 +174,7 @@ body {
     font-size: 20px;
     margin-right: 5px;
 }
+
 
 .clock {
     font-size: 1rem;
