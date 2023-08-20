@@ -1,3 +1,4 @@
+// JavaScript Code (Unchanged)
 const rate1 = document.querySelector(".rate1");
 const rate2 = document.querySelector(".rate2");
 const resultBtn = document.querySelector(".result");
