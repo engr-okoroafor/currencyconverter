@@ -60,6 +60,7 @@ function displayRate() {
     let v2 = sel2.value;
 
     let val = convert(1, v1, v2, mainContainerRates);
+    val = Math.round(val); // Round to the nearest whole number
 
     rate1.innerHTML = `1 ${v1} equals`;
     rate2.innerHTML = `${val} ${v2}`;
@@ -74,8 +75,9 @@ function updateRateCard() {
 
         // Convert rate to Naira (NGN)
         const rateInNaira = convert(1, currencyCode, "NGN", rateCardRates);
+        const roundedRate = Math.round(parseFloat(rateInNaira)); // Round to the nearest whole number
 
-        row.querySelector("[data-currency-code]").textContent = `₦ ${rateInNaira}`;
+        row.querySelector("[data-currency-code]").textContent = `₦ ${roundedRate}`;
     });
 }
 
@@ -88,6 +90,7 @@ resultBtn.addEventListener("click", () => {
         alert("Enter a Number");
     } else {
         let cVal = convert(fromVal, fromCurr, toCurr, mainContainerRates);
+        cVal = Math.round(cVal); // Round to the nearest whole number
         inpt2.value = cVal;
     }
 });
