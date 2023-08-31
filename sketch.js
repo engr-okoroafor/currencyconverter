@@ -1,4 +1,3 @@
-// JavaScript Code (Unchanged)
 const rate1 = document.querySelector(".rate1");
 const rate2 = document.querySelector(".rate2");
 const resultBtn = document.querySelector(".result");
@@ -8,6 +7,8 @@ const sel2 = selects[1];
 const inputs = document.querySelectorAll(".input input");
 const inpt1 = inputs[0];
 const inpt2 = inputs[1];
+
+
 
 let mainContainerRates = {}; // For main container rates
 let rateCardRates = {}; // For rate-card rates
@@ -40,30 +41,41 @@ async function fetchExchangeRates() {
 function populateOptions() {
     let val = "";
     Object.keys(mainContainerRates).forEach(code => {
-        const str = `<option value="${code}">${code}</option>`;
+        const flagEmoji = getFlagEmoji(code); // Function to get the flag emoji
+        const str = `<option value="${code}">${flagEmoji} ${code}</option>`;
         val += str;
     });
     selects.forEach(s => s.innerHTML = val);
     displayRate();
 }
 
+function getFlagEmoji(currencyCode) {
+    const flagEmojis = {
+        USD: "🇺🇸", GBP: "🇬🇧", EUR: "🇪🇺", CAD: "🇨🇦", AED: "🇦🇪", AED: "🇦🇪", AFN: "🇦🇫", ALL: "🇦🇱", AMD: "🇦🇲", ANG: "🇦🇳", AOA: "🇦🇴", ARS: "🇦🇷", AUD: "🇦🇺", AWG: "🇦🇼", AZN: "🇦🇿", BAM: "🇧🇦", BBD: "🇧🇧", BDT: "🇧🇩", BGN: "🇧🇬", BHD: "🇧🇭", BIF: "🇧🇮", BMD: "🇧🇲", BND: "🇧🇳", BOB: "🇧🇴", BRL: "🇧🇷", BSD: "🇧🇸", BTN: "🇧🇹", BWP: "🇧🇼", BYN: "🇧🇾", BZD: "🇧🇿", CAD: "🇨🇦", CDF: "🇨🇩", CHF: "🇨🇭", CLP: "🇨🇱", CNY: "🇨🇳", COP: "🇨🇴", CRC: "🇨🇷", CUC: "🇨🇺", CVE: "🇨🇻", CZK: "🇨🇿", DJF: "🇩🇯", DKK: "🇩🇰", DOP: "🇩🇴", DZD: "🇩🇿", EGP: "🇪🇬", ERN: "🇪🇷", ETB: "🇪🇹", EUR: "🇪🇺", FJD: "🇫🇯", FKP: "🇫🇰", GBP: "🇬🇧", GEL: "🇬🇪", GGP: "🇬🇬", GHS: "🇬🇭", GIP: "🇬🇮", GMD: "🇬🇲", GNF: "🇬🇳", GTQ: "🇬🇹", GYD: "🇬🇾", HKD: "🇭🇰", HNL: "🇭🇳", HRK: "🇭🇷", HTG: "🇭🇹", HUF: "🇭🇺", IDR: "🇮🇩", ILS: "🇮🇱", IMP: "🇮🇲", INR: "🇮🇳", IQD: "🇮🇶", IRR: "🇮🇷", ISK: "🇮🇸", JEP: "🇯🇪", JMD: "🇯🇲", JOD: "🇯🇴", JPY: "🇯🇵", KES: "🇰🇪", KGS: "🇰🇬", KHR: "🇰🇭", KMF: "🇰🇲", KRW: "🇰🇷", KWD: "🇰🇼", KYD: "🇰🇾", KZT: "🇰🇿", LAK: "🇱🇦", LBP: "🇱🇧", LKR: "🇱🇰", LRD: "🇱🇷", LSL: "🇱🇸", LYD: "🇱🇾", MAD: "🇲🇦", MDL: "🇲🇩", MGA: "🇲🇬", MKD: "🇲🇰", MMK: "🇲🇲", MNT: "🇲🇳", MOP: "🇲🇴", MRO: "🇲🇷", MRU: "🇲🇷", MUR: "🇲🇺", MVR: "🇲🇻", MWK: "🇲🇼", MXN: "🇲🇽", MYR: "🇲🇾", MZN: "🇲🇿", MZN: "🇲🇿", NAD: "🇳🇦", NGN: "🇳🇬", NIO: "🇳🇮", NOK: "🇳🇴", NPR: "🇳🇵", NZD: "🇳🇿", OMR: "🇴🇲", PAB: "🇵🇦", PEN: "🇵🇪", PGK: "🇵🇬", PHP: "🇵🇭", PKR: "🇵🇰", PLN: "🇵🇱", PYG: "🇵🇾", QAR: "🇶🇦", RON: "🇷🇴", RSD: "🇷🇸", RUB: "🇷🇺", RWF: "🇷🇼", SAR: "🇸🇦", SBD: "🇸🇧", SCR: "🇸🇨", SDG: "🇸🇩", SEK: "🇸🇪", SGD: "🇸🇬", SHP: "🇸🇭", SLL: "🇸🇱", SOS: "🇸🇴", SRD: "🇸🇷", SSP: "🇸🇸", STN: "🇸🇹", SVC: "🇸🇻", SYP: "🇸🇾", SZL: "🇸🇿", THB: "🇹🇭", TJS: "🇹🇯", TMT: "🇹🇲", TND: "🇹🇳", TOP: "🇹🇴", TRY: "🇹🇷", TTD: "🇹🇹", TWD: "🇹🇼", TZS: "🇹🇿", UAH: "🇺🇦", UGX: "🇺🇬", USD: "🇺🇸", UYU: "🇺🇾", UZS: "🇺🇿", VEF: "🇻🇪", VES: "🇻🇪", VND: "🇻🇳", VUV: "🇻🇺", WST: "🇼🇸", XAF: "🇨🇫", XCD: "🇦🇬", XOF: "🇨🇮", XPF: "🇵🇫", YER: "🇾🇪", ZAR: "🇿🇦", ZMW: "🇿🇲", ZWL: "🇿🇼", 
+    };
+    return flagEmojis[currencyCode] || currencyCode;
+}
+
 function convert(val, fromCurr, toCurr, rates) {
     if (fromCurr === "NGN") {
-        return (val * rates[toCurr]).toFixed(2); // Convert directly to NGN without division
+        return (val * rates[toCurr]).toFixed(2);
     }
     let v = (val / rates[fromCurr]) * rates[toCurr];
-    return v.toFixed(2); // Always round to 2 decimal places
+    return v.toFixed(2);
 }
 
 function displayRate() {
     let v1 = sel1.value;
     let v2 = sel2.value;
 
-    let val = convert(1, v1, v2, mainContainerRates);
-    val = Math.round(val); // Round to the nearest whole number
+    const flagEmoji1 = getFlagEmoji(v1);
+    const flagEmoji2 = getFlagEmoji(v2);
 
-    rate1.innerHTML = `1 ${v1} equals`;
-    rate2.innerHTML = `${val} ${v2}`;
+    let val = convert(1, v1, v2, mainContainerRates);
+    val = Math.round(val);
+
+    rate1.innerHTML = `${flagEmoji1} 1 ${v1} equals`;
+    rate2.innerHTML = `${val} ${flagEmoji2} ${v2}`;
 }
 
 function updateRateCard() {
@@ -73,9 +85,8 @@ function updateRateCard() {
         const currencyCode = row.querySelector("[data-currency-code]").getAttribute("data-currency-code");
         const rate = rateCardRates[currencyCode];
 
-        // Convert rate to Naira (NGN)
         const rateInNaira = convert(1, currencyCode, "NGN", rateCardRates);
-        const roundedRate = Math.round(parseFloat(rateInNaira)); // Round to the nearest whole number
+        const roundedRate = Math.round(parseFloat(rateInNaira));
 
         row.querySelector("[data-currency-code]").textContent = `₦ ${roundedRate}`;
     });
@@ -90,12 +101,24 @@ resultBtn.addEventListener("click", () => {
         alert("Enter a Number");
     } else {
         let cVal = convert(fromVal, fromCurr, toCurr, mainContainerRates);
-        cVal = Math.round(cVal); // Round to the nearest whole number
+        cVal = Math.round(cVal);
         inpt2.value = cVal;
     }
 });
 
-selects.forEach(s => s.addEventListener("change", displayRate));
+selects.forEach(s => {
+    s.addEventListener("change", displayRate);
+    s.addEventListener("click", () => {
+        s.addEventListener("keypress", function filterCurrencies(event) {
+            const filterLetter = event.key.toUpperCase();
+            const filteredCurrencies = Object.keys(mainContainerRates).filter(code => code.startsWith(filterLetter));
+            const newOptions = filteredCurrencies.map(code => `<option value="${code}">${getFlagEmoji(code)} ${code}</option>`).join('');
+            s.innerHTML = newOptions;
+            displayRate();
+            s.removeEventListener("keypress", filterCurrencies);
+        });
+    });
+});
 
 document.querySelector(".swap").addEventListener("click", () => {
     let in1 = inpt1.value;
