@@ -52,7 +52,7 @@ body {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
@@ -107,7 +107,7 @@ body {
     font-size: 1rem;
     color: #ffffff;
     background-color: #1d1d1d;
-    width: 93%; /* Reduce width to 93% */
+    width: 90%; /* Reduce width to 70% */
 }
 
 /* Target Currency */
@@ -115,24 +115,34 @@ body {
     transform: translateX(-5%);
 }
 
-/* Result Button */
-.result {
+/* Result Button and Buy Now Button */
+.result,
+.buy-now {
     margin-top: 1.5rem;
-    width: 50%; /* Reduce width to 50% */
+    width: 45%; /* Adjust width for both buttons */
     height: 45px;
     text-align: center;
     color: #ffffff;
-    background-color: #03a9f4;
     outline: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
     transition: background-color 0.3s, box-shadow 0.3s;
-    margin-left: 25%; /* Center the button */
 }
 
-.result:hover {
+.result {
+    background-color: #03a9f4;
+    margin-right: 5%; /* Add margin between buttons */
+}
+
+.buy-now {
+    background-color: #4caf50; /* Change background color */
+}
+
+/* Button hover effect */
+.result:hover,
+.buy-now:hover {
     background-color: #2196f3;
     animation: glow 1s infinite;
 }
@@ -174,7 +184,6 @@ body {
     font-size: 20px;
     margin-right: 5px;
 }
-
 
 .clock {
     font-size: 1rem;
